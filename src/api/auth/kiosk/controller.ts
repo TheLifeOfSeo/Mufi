@@ -2,6 +2,7 @@ import { Router, Request, Response } from "express"
 import Sin from "../../models/Sin"
 import Uin from "../../models/Uin"
 import QRCode from "qrcode"
+import Agent from "../../models/Agent"
 
 import md5 from "md5"
 
@@ -77,39 +78,27 @@ export const renderUserAuthorization = async (req: Request, res: Response) => {
 }
 
 export const userAuthorization = async (req: Request, res: Response) => {
-    const inputedUin = req.body.uin
-
-    //uin value is empty
-    if (inputedUin == undefined) {
-        res.status(400).json({
-            code: 400,
-            message: "uin이 입력되지 않았습니다."
-        })
-
-        return
-    }
-
-    const encrypted_uin = md5(inputedUin)
-
-    Uin.findOne({
+    const agent = await Agent.findOne({
         where: {
-            encrypted_uin,
+            store_id: req.session.kiosk.store_id,
         }
     })
-        .then((matched_uin) => {
-            if (matched_uin == null) {
-                res.status(400).json({
-                    code: 400,
-                    message: "유효하지 않은 uin입니다."
-                })
-            }
-            req.session.kiosk.user_id = matched_uin.getDataValue("user_id")
 
-            res.redirect("/kiosk")
+    const user_id = agent.getDataValue("user_id")
+
+    if (user_id) {
+        req.session.kiosk.user_id = user_id
+
+        res.status(200).json({
+            code: 200,
+            message: "user의 권한 승인"
         })
-        .catch(err => {
-            throw err
+    } else {
+        res.status(404).json({
+            code: 404,
+            message: "권한을 부여한 사용자가 없습니다."
         })
+    }
 }
 
 export const userUnAuthorize = async (req: Request, res: Response) => {

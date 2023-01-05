@@ -37,8 +37,10 @@ function onListening() {
         typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
 
     //connect to database
-    sequelize.sync({ force: true })
+    //yarn run init을 실행했을 경우, mufi scheme에 table만 생성하고 프로세스를 종료함
+    sequelize.sync({ force: process.env.INIT ? true : false })
         .then(() => {
+            //init 이면 프로세스 종료
             if (process.env.INIT) {
                 server.close()
                 sequelize.close()

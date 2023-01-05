@@ -8,12 +8,12 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "start": "cross-env MODE=production node dist/server.js",
-        "dev": "cross-env MODE=development node dist/server.js",
-        "test": "cross-env MODE=test yarn mocha --exit dist/api/test/*.test.js",
+        "start": "set NODE_ENV=production&& node dist/server.js",
+        "dev": "set NODE_ENV=development&& node dist/server.js",
+        "test": "set NODE_ENV=test&& yarn mocha --exit dist/api/test/*.test.js",
         "compile": "tsc",
-        "init": "cross-env INIT=true node dist/server.js",
-        "watch": "concurrently \"tsc --watch\" \"yarn nodemon\"",
+        "init": "set INIT=true&& node dist/server.js",
+        "watch": "set NODE_ENV=development&& concurrently \"tsc --watch\" \"yarn nodemon\"",
         "watch-ts": "tsc --watch"
     },
     "dependencies": {

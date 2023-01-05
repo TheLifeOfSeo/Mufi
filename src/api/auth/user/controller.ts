@@ -21,6 +21,8 @@ export async function signout(req: Request, res: Response) {
             //ignore
         }
     })
+
+    res.redirect("/auth/signin/user")
 }
 
 export async function oauthSignin(req: Request, res: Response) {
