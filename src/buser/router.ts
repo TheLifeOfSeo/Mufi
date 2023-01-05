@@ -1,5 +1,6 @@
 import { Router } from "express"
 import { renderHome, renderMenu, renderStore } from "."
+// import { renderBuser } from "." // intergrate-svelte
 
 export const bUserRouter = Router()
 

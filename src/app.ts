@@ -26,6 +26,7 @@ import { bUserAuthenticated } from "./api/auth/buser/middleware"
 import { userAuthenticated } from "./api/auth/user/middleware"
 import fileupload from "express-fileupload"
 import { checkGotStoreAuthorization, checkGotUserAuthorization } from "./api/auth/kiosk/middleware"
+import { renderIndex } from "./router"
 
 export const app = express()
 
@@ -42,6 +43,7 @@ app.set("views", path.join(__dirname, "../views", "templates"))
 app.use(express.static(path.join(__dirname, "../views", "statics")))
 app.use(express.static(path.join(process.env.PWD, "media")))
 
+
 //enable body parser
 app.use(express.urlencoded({ extended: true }))
 
@@ -49,6 +51,12 @@ app.use(fileupload({}))
 const sessionStore = new MySQLStore(dbConfig)
 
 app.use(session(createSessionConfig(sessionStore)))
+
+
+
+
+app.use(express.static(path.join(__dirname, "../public"))) // intergrate-svelte : /public 위치에 대해 static 미들웨어 설정
+app.get("/", renderIndex); // intergrate-svelte : 기본 도메인에 index.html 렌더링
 
 
 //--------------------------------------
