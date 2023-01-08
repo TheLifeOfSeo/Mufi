@@ -43,12 +43,14 @@
         "run": "^1.4.0",
         "sequelize": "^6.21.4",
         "sirv-cli": "^2.0.0",
+        "svelte-grid": "^5.1.1",
         "uikit": "^3.15.20",
         "url-join": "^5.0.0",
         "uuid": "^8.3.2"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-json": "^6.0.0",
         "@rollup/plugin-node-resolve": "^11.0.0",
         "@types/chai": "^4.3.3",
         "@types/chai-http": "^4.2.0",
