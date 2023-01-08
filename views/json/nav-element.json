@@ -1,0 +1,34 @@
+{
+        "list" : [
+        {
+            "board" : "관리 메뉴",
+            "index" : [
+                {
+                    "name" : "훑어보기",
+                    "dest": "/"
+                },
+                {
+                    "name" : "매장 관리",
+                    "dest": "/store"
+                },
+                {
+                    "name" : "매출 조회",
+                    "dest": "/sales"
+                }
+            ]
+        },
+        {
+            "board" : "기타",
+            "index" : [
+                {
+                    "name" : "문의",
+                    "dest" : "/abc"
+                },
+                {
+                    "name" : "로그아웃",
+                    "dest": "/abc"
+                }
+            ]
+        }
+    ]
+}
