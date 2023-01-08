@@ -46,12 +46,10 @@
         color: white;
         font-size: 18px;
     }
-    @media (min-width: 769px) { 
-        #header-wide{
-            padding: 18px;
-            display: flex;
-            justify-content: space-between;
-        }
+    #header-wide{
+        padding: 18px;
+        display: flex;
+        justify-content: space-between;
     }
     #header-wide {
         height: 72px;

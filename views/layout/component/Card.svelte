@@ -1,4 +1,4 @@
-<div id="card-body">
+<div class="card-body">
     <div>
         <slot></slot>
     </div>
@@ -6,17 +6,18 @@
 
 <style>
     @media (min-width: 769px) {
-        #card-body {
-            margin: 18px 18px;
+        .card-body {
             border-radius: 24px;
             box-shadow: 0px 4px 18px 0px #DDDDDD;
         }
     }
 
-    @media (max-width: 768px) {
-    
+    @media (min-width:769px) and (max-width: 1280px) {
+        .card-body {
+            margin: 12px 12px;
+        }
     }
-    #card-body {
+    .card-body {
         padding: 36px;
         /* background-color:aliceblue; */
         /* border-radius: 24px; */

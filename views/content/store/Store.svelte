@@ -1,6 +1,5 @@
 <script>
-  import Card from "../layout/component/Card.svelte";
-
+    import Card from "../../layout/component/Card.svelte";
 </script>
 
 <Card>
@@ -8,7 +7,7 @@
         <h2>매장 통합 관리</h2>
     </div>
     <div>
-        <button id="btn-add-store" class="uk-button uk-button-primary" href="#store-modal" uk-toggle>매장 추가하기</button>
+        <!-- <button id="btn-add-store" class="uk-button uk-button-primary" href="#store-modal" uk-toggle>매장 추가하기</button> -->
     </div>
     <div>
         <table class="uk-table uk-table-hover uk-table-small uk-table-middle uk-table-divider">

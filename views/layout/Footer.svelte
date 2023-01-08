@@ -8,7 +8,7 @@
 <style>
     footer {
         background-color: whitesmoke;
-        padding-left: 240px;
+        margin-left: 240px;
         clear: both;
     }
 </style>

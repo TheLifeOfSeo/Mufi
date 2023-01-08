@@ -16,6 +16,11 @@ Mufi kiosk를 위한 software입니다.
 
     yarn run compile
 
+### build svelte component
+
+    yarn run build
+
+
 ### run server
 
     yarn run dev
@@ -25,6 +30,13 @@ Mufi kiosk를 위한 software입니다.
 ### the source changes, compile and run the server again.
 
     yarn run watch
+
+
+## 3.
+
+### develope mode on svelte
+
+    yarn run svelte-dev
 
 # Author
 

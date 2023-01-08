@@ -7,3 +7,5 @@ media/images/**/*.*
 src/.DS_Store
 dist/
 .DS_Store
+bundle.js
+bundle.js.map

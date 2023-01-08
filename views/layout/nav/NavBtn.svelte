@@ -15,7 +15,7 @@
         border-radius: 24px;
         text-align: center;
         align-items: center;
-        transition-duration: 150ms;
+        transition-duration: 200ms;
     }
     #nav-btn:hover {
         background-color: #555588;

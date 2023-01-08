@@ -1,6 +1,6 @@
 <script>
     import {Route} from 'tinro';
-    import Store from "../content/Store.svelte";
+    import Store from "../content/store/Store.svelte";
     import Dashboard from "../content/Dashboard.svelte";
     import Sales from "../content/Sales.svelte";
 </script>
@@ -22,16 +22,6 @@
 <style>
     section {
         min-height: 90%;
-    }
-    @media (min-width: 769px) {
-        section {
-            padding-left: 240px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        section {
-            padding-left: 0px;
-        }
+        
     }
 </style>

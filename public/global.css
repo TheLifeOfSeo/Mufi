@@ -75,14 +75,37 @@ button:focus {
     font-style: normal;
 }
 
-@media (min-width: 769px) { 
-    .layout-mobile {
-        display:none;
-    }
-}
-
 @media (max-width: 768px) {
     .layout-wide {
         display: none;
     }
+    section {
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 769px){ 
+    .layout-mobile {
+        display:none;
+    }
+    section {
+        margin-left: 240px;
+    }
+}
+
+
+@media (min-width: 1281px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .grid-container .card-body {
+        margin: 12px
+    }
+    .card-body {
+        margin: 12px;
+    }
+    /* section {
+        margin: 0 18px 0 258px;
+    } */
 }
