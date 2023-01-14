@@ -27,8 +27,10 @@
         position: fixed;
         height: 100%;
         width: 240px;
-        box-shadow: 0px 4px 12px 4px rgb(144, 144, 144);
+        box-shadow: 0px 4px 12px 8px rgb(144, 144, 144);
         background-color: #303050;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
     }
     
     #nav-mobile-bg {

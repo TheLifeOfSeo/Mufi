@@ -2,7 +2,7 @@
     export let href;
     console.log(href);
 </script>
-<div id="nav-btn">
+<div id="nav-btn" class="bg-primary-clickable">
     <a href={href}>
         <slot></slot>
     </a>
@@ -15,11 +15,6 @@
         border-radius: 24px;
         text-align: center;
         align-items: center;
-        transition-duration: 200ms;
-    }
-    #nav-btn:hover {
-        background-color: #555588;
-        cursor: pointer;
     }
     a {
         height: 100%;

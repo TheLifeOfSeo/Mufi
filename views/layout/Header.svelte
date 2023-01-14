@@ -5,7 +5,6 @@
 
 <header id="header-wide" class="layout-wide">
     <div>
-        I'm Header
     </div>
     <div>
         <span class="uk-margin-small-right" uk-icon="bell"></span>
@@ -46,15 +45,18 @@
         color: white;
         font-size: 18px;
     }
-    #header-wide{
-        padding: 18px;
-        display: flex;
-        justify-content: space-between;
+    a:hover {
+        color: gainsboro;
     }
-    #header-wide {
-        height: 72px;
-        /* border-bottom: 1px solid black; */
+    @media (min-width: 769px) {
+        #header-wide{
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            height: 72px;
+        }
     }
+
     #header-space {
         height: 54px;
         width: 100%;

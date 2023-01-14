@@ -8,7 +8,11 @@
 <style>
     footer {
         background-color: whitesmoke;
-        margin-left: 240px;
         clear: both;
+    }
+    @media (min-width: 769px) {
+        footer {
+            margin-left: 240px;
+        }
     }
 </style>

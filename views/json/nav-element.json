@@ -9,7 +9,7 @@
                 },
                 {
                     "name" : "매장 관리",
-                    "dest": "/store"
+                    "dest": "/admin"
                 },
                 {
                     "name" : "매출 조회",

@@ -9,20 +9,23 @@
 export default async function fetchData(url, method, body, header) {
     const options = {
         method: method,
-        headers: {
+        headers: 
+        {
             // "Content-Type": "application/json",
             ...header,
         },
     };
-    if (body !== undefined && (method === "POST" || method === "PUT")) {
-        options.body = body;
-    }
+    if (body !== undefined && (method === "POST" || method === "PUT")) options.body = body;
+    console.log(url);
+    console.log(method);
+    console.log(body);
     const response = await fetch(url, options);
+    await console.log(response)
     const data = await response.json();
+    await console.log(data);
     if (response.ok) {
         return data;
-    }
-    else {
+    } else {
         throw Error(data);
     }
 }

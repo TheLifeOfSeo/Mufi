@@ -1,13 +1,14 @@
 <script>
     import {Route} from 'tinro';
-    import Store from "../content/store/Store.svelte";
+    import {fade} from 'svelte/transition'
     import Dashboard from "../content/Dashboard.svelte";
     import Sales from "../content/Sales.svelte";
+    import Admin from '../content/admin/admin.svelte';
 </script>
 <section>
-    <Route path="/"><Dashboard/></Route>
-    <Route path="/store"><Store/></Route>
-    <Route path="/sales"><Sales/></Route>
+    <Route path="/"><div in:fade={{duration: 150}}><Dashboard/></div></Route>
+    <Route path="/admin"><div in:fade={{duration: 150}}><Admin/></div></Route>
+    <Route path="/sales"><div in:fade={{duration: 150}}><Sales/></div></Route>
 </section>
 
 <!-- <div id="content" class="uk-child-width-expand uk-margin-remove" uk-grid>
@@ -22,6 +23,5 @@
 <style>
     section {
         min-height: 90%;
-        
     }
 </style>
